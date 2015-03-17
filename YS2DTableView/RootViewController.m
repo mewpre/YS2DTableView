@@ -8,11 +8,14 @@
 
 #import "RootViewController.h"
 #import "YS2DTableViewCell.h"
+#import "YSGoogleJSONParser.h"
 
 @interface RootViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-@property NSArray *categoriesArray;
+@property NSMutableArray *categoriesArray;
+@property NSArray *searchTermsArray;
+@property UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -20,13 +23,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.categoriesArray = @[@"Outer TableView Cell 1", @"Outer TableView Cell 2"];
+    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    self.activityIndicator.color = [[self view]tintColor];
+    [self.view addSubview:self.activityIndicator];
+    self.activityIndicator.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2);
+    self.activityIndicator.hidesWhenStopped = YES;
+    [self.activityIndicator startAnimating];
+
+    self.searchTermsArray = @[@"piano", @"karaoke", @"guitar", @"ocarina", @"microphone", @"music", @"notes"];
+    self.categoriesArray = [NSMutableArray new];
+    for (NSString *searchTerm in self.searchTermsArray)
+    {
+        [YSGoogleJSONParser getImagesDataWithString:searchTerm withCompletion:^(NSDictionary* imageDictionary) {
+            [self.categoriesArray addObject:imageDictionary];
+            [self.tableView reloadData];
+
+            if (self.categoriesArray.count == self.searchTermsArray.count)
+            {
+                [self.activityIndicator stopAnimating];
+            }
+        }];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     YS2DTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    cell.imageDataArray = [self.categoriesArray objectAtIndex:indexPath.section][@"imageData"];
+    [cell.innerCollectionView reloadData];
     return cell;
 }
 
@@ -42,7 +66,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return [self.categoriesArray objectAtIndex: section];
+    return [self.categoriesArray objectAtIndex: section][@"title"];
 }
 
 @end

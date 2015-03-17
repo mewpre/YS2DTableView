@@ -13,24 +13,39 @@
 
 - (void)awakeFromNib
 {
-    self.contentArray = @[@"Item 1", @"Item 2", @"Item 3", @"Item 4"];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+    [super setSelected:selected animated:animated]; 
 
     // Configure the view for the selected state
 }
 
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     YSImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    UIImage *image = [UIImage imageWithData:[self.imageDataArray objectAtIndex:indexPath.row]];
+    cell.imageView.image = image;
     return cell;
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.contentArray.count;
+    return self.imageDataArray.count;
+}
+
+- (void) getUIImageFromURL: (NSURL *)url withCompletion:(YSImageCollectionViewCell *(^)(UIImage *image))complete
+{
+
+    NSURLRequest * request = [NSURLRequest requestWithURL:url];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
+     {
+         if (!connectionError)
+         {
+             complete([UIImage imageWithData:data]);
+         }
+     }];
 }
 
 @end

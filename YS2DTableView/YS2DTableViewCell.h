@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) IBOutlet UICollectionView *innerCollectionView;
 
-@property NSArray *contentArray;
+@property NSArray *imageDataArray;
+
+@property UIActivityIndicatorView *activityIndicator;
 
 @end

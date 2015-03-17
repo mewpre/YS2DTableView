@@ -17,6 +17,7 @@
 		60F031131AB4643400236C58 /* YS2DTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F031121AB4643400236C58 /* YS2DTableViewTests.m */; };
 		60FC81251AB7D20F00DB7FC5 /* YS2DTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FC81241AB7D20F00DB7FC5 /* YS2DTableViewCell.m */; };
 		60FC81281AB7D66500DB7FC5 /* YSImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FC81271AB7D66500DB7FC5 /* YSImageCollectionViewCell.m */; };
+		60FC812B1AB8210300DB7FC5 /* YSGoogleJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FC812A1AB8210300DB7FC5 /* YSGoogleJSONParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		60FC81241AB7D20F00DB7FC5 /* YS2DTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YS2DTableViewCell.m; sourceTree = "<group>"; };
 		60FC81261AB7D66500DB7FC5 /* YSImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSImageCollectionViewCell.h; sourceTree = "<group>"; };
 		60FC81271AB7D66500DB7FC5 /* YSImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSImageCollectionViewCell.m; sourceTree = "<group>"; };
+		60FC81291AB8210300DB7FC5 /* YSGoogleJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSGoogleJSONParser.h; sourceTree = "<group>"; };
+		60FC812A1AB8210300DB7FC5 /* YSGoogleJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSGoogleJSONParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				60F030F81AB4643300236C58 /* AppDelegate.m */,
 				60F030FD1AB4643300236C58 /* RootViewController.h */,
 				60F030FE1AB4643300236C58 /* RootViewController.m */,
+				60FC81291AB8210300DB7FC5 /* YSGoogleJSONParser.h */,
+				60FC812A1AB8210300DB7FC5 /* YSGoogleJSONParser.m */,
 				60FC81231AB7D20F00DB7FC5 /* YS2DTableViewCell.h */,
 				60FC81241AB7D20F00DB7FC5 /* YS2DTableViewCell.m */,
 				60FC81261AB7D66500DB7FC5 /* YSImageCollectionViewCell.h */,
@@ -232,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60FC812B1AB8210300DB7FC5 /* YSGoogleJSONParser.m in Sources */,
 				60F030F91AB4643300236C58 /* AppDelegate.m in Sources */,
 				60FC81251AB7D20F00DB7FC5 /* YS2DTableViewCell.m in Sources */,
 				60F030F61AB4643300236C58 /* main.m in Sources */,
