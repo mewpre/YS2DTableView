@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="125" id="DjN-rf-d1t" customClass="YS2DTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="Cell" rowHeight="125" id="DjN-rf-d1t" customClass="YS2DTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DjN-rf-d1t" id="Rlb-a8-SFl">
@@ -43,7 +43,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="femaleAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="kue-yE-eJV">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kue-yE-eJV">
                                                                         <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                                                     </imageView>
                                                                 </subviews>
@@ -103,7 +103,4 @@
             <point key="canvasLocation" x="265" y="334"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="femaleAvatar" width="200" height="200"/>
-    </resources>
 </document>

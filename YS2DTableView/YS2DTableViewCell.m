@@ -35,17 +35,17 @@
     return self.imageDataArray.count;
 }
 
-- (void) getUIImageFromURL: (NSURL *)url withCompletion:(YSImageCollectionViewCell *(^)(UIImage *image))complete
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    YSImageCollectionViewCell *cell = (YSImageCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
 
-    NSURLRequest * request = [NSURLRequest requestWithURL:url];
-    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
-     {
-         if (!connectionError)
-         {
-             complete([UIImage imageWithData:data]);
-         }
-     }];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:@[cell.imageView.image] applicationActivities:@[]];
+    activityVC.excludedActivityTypes = @[UIActivityTypeAssignToContact, UIActivityTypePrint];
+
+    UITableView *tv = (UITableView *) self.superview.superview;
+    UIViewController *vc = (UITableViewController *) tv.dataSource;
+
+    [vc presentViewController:activityVC animated:TRUE completion:nil];
 }
 
 @end
