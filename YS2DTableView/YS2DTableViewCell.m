@@ -25,14 +25,27 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     YSImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    UIImage *image = [UIImage imageWithData:[self.imageDataArray objectAtIndex:indexPath.row]];
+    NSInteger dataSourceIndex;
+
+    // Since pulling from Google Image Search only yields 10 images, if we want to show more, just repeat previous images
+    if (indexPath.row < self.imageDataArray.count)
+    {
+        dataSourceIndex = indexPath.row;
+    }
+    else
+    {
+        dataSourceIndex = indexPath.row % self.imageDataArray.count;
+    }
+
+    UIImage *image = [UIImage imageWithData:[self.imageDataArray objectAtIndex:dataSourceIndex]];
     cell.imageView.image = image;
     return cell;
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.imageDataArray.count;
+    // can set to any number > 0.
+    return 15;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
