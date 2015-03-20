@@ -48,4 +48,12 @@
     [vc presentViewController:activityVC animated:TRUE completion:nil];
 }
 
+-(CGSize)collectionView:(UICollectionView *)collectionView
+                 layout:(UICollectionViewLayout*)collectionViewLayout
+ sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(self.rowHeight - 1, self.rowHeight - 1);
+}
+
+
 @end

@@ -13,7 +13,7 @@
 @property (strong, nonatomic) IBOutlet UICollectionView *innerCollectionView;
 
 @property NSArray *imageDataArray;
-
+@property CGFloat rowHeight;
 @property UIActivityIndicatorView *activityIndicator;
 
 @end

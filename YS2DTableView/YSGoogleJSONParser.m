@@ -12,7 +12,7 @@
 
 + (void)getImagesDataWithString:(NSString *)searchString withCompletion:(void(^)(NSDictionary* imageDictionary))complete
 {
-    NSString *queryString = [NSString stringWithFormat:@"https://www.googleapis.com/customsearch/v1?q=%@&cx=012799440939059275365%%3A94l7uujllrk&fileType=png&searchType=image&key=AIzaSyDVNDs6ii_QG-7_ae7lP285pAgz06_2krw", searchString];
+    NSString *queryString = [NSString stringWithFormat:@"https://www.googleapis.com/customsearch/v1?q=%@&cx=012799440939059275365%%3A94l7uujllrk&fileType=png&searchType=image&key=AIzaSyCAg3SP4GXA2LiOJvtrWVmRj1QHwTl1uHE", searchString];
     NSURL * url = [NSURL URLWithString:queryString];
 
     NSURLRequest * request = [NSURLRequest requestWithURL:url];

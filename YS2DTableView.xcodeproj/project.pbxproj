@@ -10,7 +10,7 @@
 		60F030F61AB4643300236C58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F030F51AB4643300236C58 /* main.m */; };
 		60F030F91AB4643300236C58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F030F81AB4643300236C58 /* AppDelegate.m */; };
 		60F030FC1AB4643300236C58 /* YS2DTableView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60F030FA1AB4643300236C58 /* YS2DTableView.xcdatamodeld */; };
-		60F030FF1AB4643300236C58 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F030FE1AB4643300236C58 /* RootViewController.m */; };
+		60F030FF1AB4643300236C58 /* YSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F030FE1AB4643300236C58 /* YSViewController.m */; };
 		60F031021AB4643300236C58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60F031001AB4643300236C58 /* Main.storyboard */; };
 		60F031041AB4643300236C58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60F031031AB4643300236C58 /* Images.xcassets */; };
 		60F031071AB4643300236C58 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60F031051AB4643300236C58 /* LaunchScreen.xib */; };
@@ -37,8 +37,8 @@
 		60F030F71AB4643300236C58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		60F030F81AB4643300236C58 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		60F030FB1AB4643300236C58 /* YS2DTableView.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YS2DTableView.xcdatamodel; sourceTree = "<group>"; };
-		60F030FD1AB4643300236C58 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		60F030FE1AB4643300236C58 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		60F030FD1AB4643300236C58 /* YSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YSViewController.h; sourceTree = "<group>"; };
+		60F030FE1AB4643300236C58 /* YSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YSViewController.m; sourceTree = "<group>"; };
 		60F031011AB4643300236C58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		60F031031AB4643300236C58 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		60F031061AB4643300236C58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -95,14 +95,14 @@
 				60F031001AB4643300236C58 /* Main.storyboard */,
 				60F030F71AB4643300236C58 /* AppDelegate.h */,
 				60F030F81AB4643300236C58 /* AppDelegate.m */,
-				60F030FD1AB4643300236C58 /* RootViewController.h */,
-				60F030FE1AB4643300236C58 /* RootViewController.m */,
-				60FC81291AB8210300DB7FC5 /* YSGoogleJSONParser.h */,
-				60FC812A1AB8210300DB7FC5 /* YSGoogleJSONParser.m */,
+				60F030FD1AB4643300236C58 /* YSViewController.h */,
+				60F030FE1AB4643300236C58 /* YSViewController.m */,
 				60FC81231AB7D20F00DB7FC5 /* YS2DTableViewCell.h */,
 				60FC81241AB7D20F00DB7FC5 /* YS2DTableViewCell.m */,
 				60FC81261AB7D66500DB7FC5 /* YSImageCollectionViewCell.h */,
 				60FC81271AB7D66500DB7FC5 /* YSImageCollectionViewCell.m */,
+				60FC81291AB8210300DB7FC5 /* YSGoogleJSONParser.h */,
+				60FC812A1AB8210300DB7FC5 /* YSGoogleJSONParser.m */,
 				60F031031AB4643300236C58 /* Images.xcassets */,
 				60F031051AB4643300236C58 /* LaunchScreen.xib */,
 				60F030FA1AB4643300236C58 /* YS2DTableView.xcdatamodeld */,
@@ -242,7 +242,7 @@
 				60FC81251AB7D20F00DB7FC5 /* YS2DTableViewCell.m in Sources */,
 				60F030F61AB4643300236C58 /* main.m in Sources */,
 				60FC81281AB7D66500DB7FC5 /* YSImageCollectionViewCell.m in Sources */,
-				60F030FF1AB4643300236C58 /* RootViewController.m in Sources */,
+				60F030FF1AB4643300236C58 /* YSViewController.m in Sources */,
 				60F030FC1AB4643300236C58 /* YS2DTableView.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
